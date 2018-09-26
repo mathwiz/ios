@@ -9,7 +9,7 @@ class Asset(val name: String, val id: String) {
     throw new SubclassResponsibility()
   }
 
-  def containsSecurity(aSecurity: Security) : Boolean = {
+  def containsSecurity(aSecurity: Asset) : Boolean = {
     throw new SubclassResponsibility()
   }
 
@@ -20,6 +20,6 @@ class Asset(val name: String, val id: String) {
   def depth() : Int = if (container == null) 0 else 1 + container.depth()
 
   def padding() : String = {
-    throw new SubclassResponsibility()
+    (1 until depth() + 1) .foldLeft("") { (sum, it) => sum + "    " }
   }
 }

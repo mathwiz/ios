@@ -22,4 +22,8 @@ class Asset(val name: String, val id: String) {
   def padding() : String = {
     (1 until depth() + 1) .foldLeft("") { (sum, it) => sum + "    " }
   }
+
+  def containerName(): String = {
+    if (container == null) "" else name
+  }
 }

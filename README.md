@@ -1,3 +1,8 @@
 # ios
 
-The new AI project.
+Code library.
+
+* Scheme
+* Common Lisp
+* Python
+
